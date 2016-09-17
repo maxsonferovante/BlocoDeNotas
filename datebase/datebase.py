@@ -28,13 +28,8 @@ class DateBase(object):
 
     def insert_notes(self, notes):
         sql = "INSERT INTO notes VALUES (null,?,?,?)"
-
-        if type(notes[0]) == tuple:
-            self.cursor.execute(sql, notes)
-            self.commint_db()
-        else:
-            self.cursor.execute(sql, notes)
-            self.commint_db()
+        self.cursor.execute(sql, notes)
+        self.commint_db()
 
     def update_note(self, note):
         sql = "UPDATE notes SET name =" + note.name \

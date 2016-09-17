@@ -1,9 +1,13 @@
 from datebase.datebase import DateBase
 
 
-class Notepad(DateBase):
+class Notepad:
     def __init__(self):
-        DateBase.__init__(self, "notes.db")
+        self.db = DateBase("notes.db")
 
+    def save_note(self, note):
+        self.note = note
 
-n = Notepad()
+        self.db.insert_notes((self.note.name,
+                              self.note.text,
+                              self.note.creation_date))
