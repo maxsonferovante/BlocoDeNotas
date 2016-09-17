@@ -55,14 +55,12 @@ class DateBase(object):
         return [note for note in self.cursor.fetchall()]
 
     def get_note(self, name):
-        sql = "SELECT * FROM note WHERE name = " + name + " ORDER BY date"
+        sql = "SELECT * FROM notes WHERE name == '" + name + "' ORDER BY date"
         self.cursor.execute(sql)
 
         recset = self.cursor.fetchall()
+        return recset
 
-        if len(recset) == 1:
-            return recset
-        return [note for note in recset]
 
     def close_db(self):
         if self.conn:

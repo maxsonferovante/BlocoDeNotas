@@ -11,9 +11,9 @@ class Note(object):
 
     def find(self, word):
         if word in self.text:
-            print ("A palavra foi encontrada.")
+            return True
         else:
-            print ("A palavra nao foi encontrada.")
+            return False
 
     def update_date(self):
         self.creation_date = ("Documento-sem-Nome-" + datetime.datetime.now()[:19])

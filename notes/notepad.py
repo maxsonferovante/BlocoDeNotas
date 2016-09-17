@@ -7,7 +7,10 @@ class Notepad:
 
     def save_note(self, note):
         self.note = note
-
-        self.db.insert_notes((self.note.name,
-                              self.note.text,
-                              self.note.creation_date))
+        if note.name in self.db.get_name_notes_salve():
+            return False
+        else:
+            self.db.insert_notes((self.note.name,
+                                  self.note.creation_date,
+                                  self.note.text))
+            return True
