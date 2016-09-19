@@ -9,7 +9,13 @@ class Note(object):
         self.name = name or ("Documento-sem-Nome-" + self.creation_date)
         self.text = text
 
-    def find(self, word):
+    def __init__(self, id, name="", date="", text=""):
+        self.id = id
+        self.name = name or ("Documento-sem-Nome-" + self.creation_date)
+        self.creation_date = str(datetime.datetime.now())[:19]
+        self.text = text
+
+    def find_word(self, word):
         if word in self.text:
             return True
         else:

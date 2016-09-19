@@ -1,3 +1,4 @@
+# coding=utf-8
 import sqlite3
 
 from access.access import Private
@@ -59,8 +60,12 @@ class DateBase(object):
         self.cursor.execute(sql)
 
         recset = self.cursor.fetchall()
+        '''o metodo fetchall retorna uma lista de tuplas formadas pelas columas.
+            Por preferência mando apenas a tupla de retorno
+        '''
+        if recset:
+            return recset[0]
         return recset
-
 
     def close_db(self):
         if self.conn:

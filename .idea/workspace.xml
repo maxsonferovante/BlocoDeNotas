@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76b03ed9-cb88-462d-94c5-5d89d0663c3a" name="Default" comment="Implementado as classes reponsáveis pela GUI. &#10;Adição de notes fucional.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BlocoDeNotas.iml" afterPath="$PROJECT_DIR$/.idea/BlocoDeNotas.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="76b03ed9-cb88-462d-94c5-5d89d0663c3a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teste.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datebase/datebase.py" afterPath="$PROJECT_DIR$/datebase/datebase.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/app.py" afterPath="$PROJECT_DIR$/gui/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes/note.py" afterPath="$PROJECT_DIR$/notes/note.py" />
@@ -21,10 +20,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/BlocoDeNotas$Unittests_in_setup.coverage" NAME="Unittests in setup Coverage Results" MODIFIED="1474144223885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BlocoDeNotas$teste.coverage" NAME="teste Coverage Results" MODIFIED="1474212678054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BlocoDeNotas$notepad.coverage" NAME="notepad Coverage Results" MODIFIED="1474132947669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/BlocoDeNotas$App.coverage" NAME="App Coverage Results" MODIFIED="1474143035975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
+    <SUITE FILE_PATH="coverage/BlocoDeNotas$App.coverage" NAME="App Coverage Results" MODIFIED="1474285837513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
     <SUITE FILE_PATH="coverage/BlocoDeNotas$datebase.coverage" NAME="datebase Coverage Results" MODIFIED="1473356458662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datebase" />
     <SUITE FILE_PATH="coverage/BlocoDeNotas$note.coverage" NAME="note Coverage Results" MODIFIED="1474074699652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myAutoScrollToSource" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,16 +38,28 @@
     <favorites_list name="BlocoDeNotas" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5854092">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gui/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="160" column="38" selection-start-line="160" selection-start-column="17" selection-end-line="160" selection-end-column="38" />
+                <state relative-caret-position="202">
+                  <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="notepad.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/notes/notepad.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="413">
+                  <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -53,17 +69,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/gui/app.py">
+          <file leaf-file-name="datebase.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/datebase/datebase.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="90">
+                  <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
                   <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                    <element signature="e#174#1344#0" expanded="false" />
-                    <element signature="e#1377#2003#0" expanded="false" />
-                    <element signature="e#2034#4203#0" expanded="false" />
-                    <element signature="e#4235#5862#0" expanded="false" />
+                    <marker date="1474285864543" expanded="true" signature="366:573" ph="CREATE TABLE... IF" />
+                    <marker date="1474285864543" expanded="true" signature="744:781" ph="INSERT INTO notes... " />
+                    <marker date="1474285864543" expanded="true" signature="898:1058" ph="UPDATE notes... " />
+                    <marker date="1474285864543" expanded="true" signature="898:1069" ph="UPDATE notes... " />
+                    <marker date="1474285864543" expanded="true" signature="1179:1210" ph="DELETE FROM " />
+                    <marker date="1474285864543" expanded="true" signature="1312:1348" ph="SELECT name notes" />
+                    <marker date="1474285864543" expanded="true" signature="1484:1517" ph="SELECT * FRO... notes" />
+                    <marker date="1474285864543" expanded="true" signature="1655:1717" ph="SELECT * FRO... notes" />
                   </folding>
                 </state>
               </provider>
@@ -72,6 +91,14 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -97,10 +124,11 @@
         <option value="$PROJECT_DIR$/gui/new_window.py" />
         <option value="$PROJECT_DIR$/gui/new_note.py" />
         <option value="$PROJECT_DIR$/gui/master.py" />
-        <option value="$PROJECT_DIR$/datebase/datebase.py" />
-        <option value="$PROJECT_DIR$/notes/notepad.py" />
+        <option value="$PROJECT_DIR$/teste.py" />
         <option value="$PROJECT_DIR$/notes/note.py" />
+        <option value="$PROJECT_DIR$/notes/notepad.py" />
         <option value="$PROJECT_DIR$/gui/app.py" />
+        <option value="$PROJECT_DIR$/datebase/datebase.py" />
       </list>
     </option>
   </component>
@@ -142,7 +170,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,6 +232,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,24 +256,6 @@
       <module name="BlocoDeNotas" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/note.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="datebase" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datebase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="BlocoDeNotas" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datebase/datebase.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -282,6 +292,47 @@
       <module name="BlocoDeNotas" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in setup" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BlocoDeNotas" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BlocoDeNotas" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -494,18 +545,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.note" />
-      <item index="1" class="java.lang.String" itemvalue="Python.datebase" />
-      <item index="2" class="java.lang.String" itemvalue="Python.notepad" />
-      <item index="3" class="java.lang.String" itemvalue="Python.App" />
+      <item index="1" class="java.lang.String" itemvalue="Python.notepad" />
+      <item index="2" class="java.lang.String" itemvalue="Python.App" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
+      <item index="4" class="java.lang.String" itemvalue="Python.teste" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.App" />
-        <item index="1" class="java.lang.String" itemvalue="Python.notepad" />
-        <item index="2" class="java.lang.String" itemvalue="Python.note" />
-        <item index="3" class="java.lang.String" itemvalue="Python.datebase" />
+        <item index="1" class="java.lang.String" itemvalue="Python.teste" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in setup" />
+        <item index="3" class="java.lang.String" itemvalue="Python.notepad" />
+        <item index="4" class="java.lang.String" itemvalue="Python.note" />
       </list>
     </recent_temporary>
   </component>
@@ -555,8 +608,23 @@
       <option name="project" value="LOCAL" />
       <updated>1474077321105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="NewNote completamente implementado; Ficou faltando, na class FindNote, a chamada da class NewNote no modo edição.">
+      <created>1474143534986</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1474143534986</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_setup - 2016.09.17 at 17h 29m 29s.xml">
+      <configuration name="Unittests in setup" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_setup - 2016.09.17 at 17h 30m 24s.xml">
+      <configuration name="Unittests in setup" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="24" width="1319" height="744" extended-state="6" />
@@ -564,21 +632,22 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14783928" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21973094" sideWeight="0.13343441" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24813154" sideWeight="0.14859742" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.47915086" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21973094" sideWeight="0.8665656" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24813154" sideWeight="0.8514026" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.49431387" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910313" sideWeight="0.49128127" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47915086" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.47915086" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -600,7 +669,8 @@
     <MESSAGE value="Organização do diretorio" />
     <MESSAGE value="Implementação dos método delete e update notes na classe datebese." />
     <MESSAGE value="Implementado as classes reponsáveis pela GUI. &#10;Adição de notes fucional.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado as classes reponsáveis pela GUI. &#10;Adição de notes fucional.&#10;" />
+    <MESSAGE value="NewNote completamente implementado; Ficou faltando, na class FindNote, a chamada da class NewNote no modo edição." />
+    <option name="LAST_COMMIT_MESSAGE" value="NewNote completamente implementado; Ficou faltando, na class FindNote, a chamada da class NewNote no modo edição." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -618,10 +688,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,10 +698,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -646,10 +708,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,10 +718,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -674,10 +728,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,10 +738,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -702,10 +748,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -772,49 +814,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py" />
+    <entry file="file://$PROJECT_DIR$/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notes/note.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="150">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/notepad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datebase/datebase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+        <state relative-caret-position="413">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding>
-            <marker date="1474132038989" expanded="true" signature="351:558" ph="CREATE TABLE... IF" />
-            <marker date="1474132038989" expanded="true" signature="729:766" ph="INSERT INTO notes... " />
-            <marker date="1474132038989" expanded="true" signature="883:1043" ph="UPDATE notes... " />
-            <marker date="1474132038989" expanded="true" signature="1164:1195" ph="DELETE FROM " />
-            <marker date="1474132038989" expanded="true" signature="1297:1333" ph="SELECT name notes" />
-            <marker date="1474132038989" expanded="true" signature="1469:1502" ph="SELECT * FRO... notes" />
-            <marker date="1474132038989" expanded="true" signature="1640:1702" ph="SELECT * FRO... note" />
-            <marker date="1474132038989" expanded="true" signature="1640:1703" ph="SELECT * FRO... notes" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="202">
+          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#174#1344#0" expanded="false" />
-            <element signature="e#1377#2003#0" expanded="false" />
-            <element signature="e#2034#4203#0" expanded="false" />
-            <element signature="e#4235#5862#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datebase/datebase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <marker date="1474285864543" expanded="true" signature="366:573" ph="CREATE TABLE... IF" />
+            <marker date="1474285864543" expanded="true" signature="744:781" ph="INSERT INTO notes... " />
+            <marker date="1474285864543" expanded="true" signature="898:1058" ph="UPDATE notes... " />
+            <marker date="1474285864543" expanded="true" signature="898:1069" ph="UPDATE notes... " />
+            <marker date="1474285864543" expanded="true" signature="1179:1210" ph="DELETE FROM " />
+            <marker date="1474285864543" expanded="true" signature="1312:1348" ph="SELECT name notes" />
+            <marker date="1474285864543" expanded="true" signature="1484:1517" ph="SELECT * FRO... notes" />
+            <marker date="1474285864543" expanded="true" signature="1655:1717" ph="SELECT * FRO... notes" />
           </folding>
         </state>
       </provider>
