@@ -3,7 +3,7 @@ import sqlite3
 
 from access.access import Private
 
-Private("conn", "cursor", "create_table", "commint_db")
+Private("conn", "cursor", "commint_db")
 
 
 class DateBase(object):
@@ -30,20 +30,19 @@ class DateBase(object):
     def insert_notes(self, notes):
         sql = "INSERT INTO notes VALUES (null,?,?,?)"
         self.cursor.execute(sql, notes)
+
         self.commint_db()
 
     def update_note(self, note):
-        sql = "UPDATE notes SET name =" + note.name \
-              + ", date = " + note.creation_date \
-              + ", text = " + note.text \
-              + "WHERE id = " + note.id
 
-        self.cursor.execute(sql)
+        ##cur.execute("UPDATE Cars SET Price=? WHERE Id=?", (uPrice, uId))
+
+        self.cursor.execute("UPDATE notes SET name =?,text =? WHERE id =?", (note.name, note.text, str(note.id)))
         self.commint_db()
 
-    def delete_note(self, note):
-        sql = "DELETE FROM notes WHERE name =? "
-        self.cursor.execute(sql, (note.name,))
+    def delete_note(self, id):
+        sql = "DELETE FROM notes WHERE id =? "
+        self.cursor.execute(sql, (id,))
 
     def get_name_notes_salve(self):
         sql = "SELECT name FROM notes ORDER BY date"
@@ -63,8 +62,7 @@ class DateBase(object):
         '''o metodo fetchall retorna uma lista de tuplas formadas pelas columas.
             Por preferência mando apenas a tupla de retorno
         '''
-        if recset:
-            return recset[0]
+        print recset
         return recset
 
     def close_db(self):
