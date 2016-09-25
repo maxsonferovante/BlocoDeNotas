@@ -1,4 +1,5 @@
 # coding=utf-8
+import os
 import sqlite3
 
 from access.access import Private
@@ -8,7 +9,12 @@ Private("conn", "cursor", "commint_db")
 
 class DateBase(object):
     def __init__(self):
+
+        if not os.path.isdir("/home/mferovante/Documents/NoteApp"):
+            os.system("mkdir /home/mferovante/Documents/NoteApp")
+
         self.conn = sqlite3.connect("/home/mferovante/Documents/NoteApp/note.db")
+
         self.cursor = self.conn.cursor()
         self.create_table()
 
