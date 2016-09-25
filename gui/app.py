@@ -1,22 +1,14 @@
-import Tkinter as tk  # python3
-import tkMessageBox
-import ttk as ttk
+import Tkinter as tk
 
-from datebase import datebase
-from notes import notepad, note
-
-TITLE_FONT = ("Helvetica", 18, "bold")
+from findnote import FindNote
+from newnote import NewNote
+from starpage import StartPage
 
 
 class NotePadApp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        (datebase.DateBase("notes.db")).create_table()
-
-        # the container is where we'll stack a bunch of frames
-        # on top of each other, then the one we want visible
-        # will be raised above the others
         self.wm_title("FAKE NOTE TAUROS")
         self.geometry("850x600+320+100")
 
@@ -32,175 +24,13 @@ class NotePadApp(tk.Tk):
             frame = F(parent=self.container, controller=self)
             self.frames[page_name] = frame
 
-            # put all of the pages in the same location;
-            # the one on the top of the stacking order
-            # will be the one that is visible.
             frame.grid(row=0, column=0, sticky="nsew")
 
         self.show_frame("StartPage")
 
     def show_frame(self, page_name):
-        '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
-
-
-class StartPage(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-
-        label = ttk.Label(self, text="This is the note taurus", font=TITLE_FONT)
-
-        button1 = ttk.Button(self, text="Go to New Note",
-                             command=lambda: controller.show_frame("NewNote"))
-        button2 = ttk.Button(self, text="Go to Find Note",
-                             command=lambda: controller.show_frame("FindNote"))
-
-        label.pack(side="top", padx=10, pady=10)
-        button1.pack(side="top", padx=10, pady=10)
-        button2.pack(side="top", padx=10, pady=10)
-
-
-class NewNote(tk.Frame):
-    def __init__(self, parent, controller, note=None):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        self.note = note
-
-        scrollbar = ttk.Scrollbar(self)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
-        self.text = tk.Text(self)
-        self.text.pack(expand=tk.YES, fill="x", pady=1)
-        self.text.focus_force()
-
-        self.button_delete = ttk.Button(self, text="Delete note",
-                                        state=tk.DISABLED,
-                                        command=self.btt_delete_note)
-
-        self.btt_text = tk.StringVar()
-        self.btt_text.set("Save note")
-
-        self.button_save = ttk.Button(self, textvariable=self.btt_text,
-                                      command=self.btt_save_note)
-
-        self.button_back_find = ttk.Button(self, text="Go to try a new search",
-                                           state=tk.DISABLED,
-                                           command=self.btt_back_find)
-
-        self.button_back = ttk.Button(self, text="Go to the start page",
-                                      command=self.btt_back_startPage)
-
-        self.label_name = ttk.Label(self, text="Enter the name of the note: ")
-
-        self.var = tk.StringVar()
-        self.name = tk.Entry(self, textvariable=self.var)
-
-        self.button_delete.pack(side=tk.LEFT, padx=10, pady=5)
-        self.button_save.pack(side=tk.LEFT, padx=10, pady=5)
-        self.button_back_find.pack(side=tk.LEFT, padx=10, pady=5)
-        self.button_back.pack(side=tk.LEFT, padx=10, pady=10)
-        self.label_name.pack(side=tk.LEFT)
-        self.name.pack(side=tk.LEFT)
-
-        if self.note is not None:
-            print "Note id:", self.note.id
-            self.name.insert(tk.END, self.note.name)
-            self.text.insert(tk.END, self.note.text)
-            self.btt_text.set("Update note")
-            self.button_back_find.config(state="normal")
-            self.button_delete.config(state="normal")
-
-
-    def btt_save_note(self):
-        if self.note is None:
-            result = tkMessageBox.askquestion("Save", "Are You Sure?", icon='question')
-            if result == "yes":
-                nt = note.Note(self.name.get(), self.text.get(1.0, tk.END))
-
-                if not (notepad.Notepad()).save_note(nt):
-                    tkMessageBox.askretrycancel("Alert", "There is already the name. Try other", icon='error')
-                    self.name.focus_force()
-                else:
-                    tkMessageBox.showinfo("Sucess", "New notes saved", )
-        else:
-            result = tkMessageBox.askquestion("Update", "Are You Sure?", icon='question')
-            if result == "yes":
-                self.note.name = self.name.get()
-                self.note.text = self.text.get("0.0", "end")
-
-                (notepad.Notepad()).update_note(self.note)
-                tkMessageBox.showinfo("Sucess", "New notes updated", )
-
-    def btt_back_find(self):
-        result = tkMessageBox.askquestion("Try a new find", "Are You Sure?", icon='question')
-        if result == "yes":
-            self.name.delete(0, tk.END)
-            self.text.delete(1.0, tk.END)
-            self.controller.show_frame("FindNote")
-
-    def btt_delete_note(self):
-        result = tkMessageBox.askquestion("Erase", "Are You Sure?", icon='question')
-        if result == "yes":
-            (notepad.Notepad()).erase(self.note)
-
-            tkMessageBox.showinfo("Sucess", "Notes deleted", )
-
-            self.name.delete(0, tk.END)
-            self.text.delete(1.0, tk.END)
-
-            self.controller.show_frame("FindNote")
-
-        else:
-            self.text.focus_force()
-
-    def btt_back_startPage(self):
-        result = tkMessageBox.askquestion("Not be saved", "Are You Sure?", icon='question')
-        if result == "yes":
-            self.name.delete(0, tk.END)
-            self.text.delete(1.0, tk.END)
-            self.controller.show_frame("StartPage")
-
-
-class FindNote(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        self.parent = parent
-
-        label_find = ttk.Label(self, text="Texto para Pesquisa: ")
-
-        self.var = tk.StringVar()
-        self.var.set("")
-        self.name = tk.Entry(self, textvariable=self.var)
-
-        button_find = ttk.Button(self, text="Find Note",
-                                 command=self.btt_find_note)
-        button = ttk.Button(self, text="Go to the start page",
-                            command=self.btt_back_startPage)
-
-        label_find.pack(pady=5)
-        self.name.pack(pady=5)
-        button_find.pack(pady=10)
-        button.pack(pady=10)
-
-    def btt_find_note(self):
-        note_returned = (notepad.Notepad()).find_note(self.name.get())
-        print (note_returned)
-
-        if note_returned is not None:
-            self.name.delete(0, 'end')
-            nn = NewNote(parent=self.parent, controller=self.controller, note=note_returned)
-            nn.grid(row=0, column=0, sticky="nsew")
-            nn.tkraise()
-        else:
-            tkMessageBox.askretrycancel("Retry", "No note found", icon="error")
-            self.name.delete(0, 'end')
-            self.name.focus_force()
-
-    def btt_back_startPage(self):
-        self.controller.show_frame("StartPage")
 
 
 if __name__ == "__main__":

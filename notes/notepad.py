@@ -3,7 +3,7 @@ from notes.note import Note
 
 class Notepad:
     def __init__(self):
-        self.db = DateBase("/home/mferovante/PycharmProjects/BlocoDeNotas/datebase/notes.db")
+        self.db = DateBase()
 
     def save_note(self, note):
         self.note = note
@@ -23,14 +23,16 @@ class Notepad:
     def find_note(self, name):
         note = None
         aux = self.db.get_note(name)
+        self.db.close_db()
+
+        print type(aux), aux
         if aux:
-            note = Note(aux[0], aux[1], aux[2], aux[3])
-            self.db.close_db()
-            return note
-        else:
-            self.db.close_db()
+            note = Note(aux[0][1], aux[0][3])
+            note.id = aux[0][0]
+            note.creation_date = aux[0][2]
             return note
 
+        return note
 
     def update_note(self, note):
         self.db.update_note(note)
